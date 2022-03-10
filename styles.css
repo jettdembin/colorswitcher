@@ -17,13 +17,14 @@ svg {
   pointer-events: none;
 }
 
-/* START OF MAIN CNTR */
+/* START COLORS CNTR */
 
-.colors-cntr{
+.colors-cntr {
   min-height: 80vh;
   display: flex;
   color: rgb(212, 212, 212);
 }
+
 .color {
   height: 80vh;
   display: flex;
@@ -36,6 +37,7 @@ svg {
 }
 .color h2 {
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .adjust,
@@ -47,25 +49,82 @@ svg {
   margin: 2rem 0rem;
 }
 
-
-/*  START SLIDER */
-input[type="range"] {
-  -webkit-appearance: none;
-  margin: 1rem 0rem;
-  width: 80%;
-  position: relative;
-  border-radius: 1rem;
-  cursor: pointer;
-}
+/* START SLIDERS */
 
 .sliders-cntr {
   display: flex;
   flex-direction: column;
   position: absolute;
   bottom: 0%;
-  background: red;
+  background: rgb(255, 255, 255);
+  opacity: 0;
   padding: 1rem;
   width: 80%;
   border-top-right-radius: 1rem;
+  pointer-events: none;
   border-top-left-radius: 1rem;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
 }
+.sliders.active {
+  /* opacity: 1; */
+  transform: translateY(0px);
+  pointer-events: all;
+}
+
+.sliders-cntr button,
+.close-save,
+.close-library {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: none;
+  background: rgb(73, 73, 73);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+/* END SLIDERS */
+
+/* END COLORS CNTR */
+
+/* START PANEL CNTR */
+
+.panel-cntr {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20vh;
+}
+.panel-cntr button {
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: rgb(31, 33, 63);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.panel-cntr p {
+  font-size: 1.2rem;
+}
+
+.library-panel,
+.generate-panel,
+.save-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* END PANEL CNTR */
