@@ -6,6 +6,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: rgb(51, 51, 51);
+  background-color: aliceblue;
 }
 button {
   font-family: "Poppins", sans-serif;
@@ -35,4 +36,36 @@ svg {
 }
 .color h2 {
   font-size: 2rem;
+}
+
+.adjust,
+.lock {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;    
+  margin: 2rem 0rem;
+}
+
+
+/*  START SLIDER */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 80%;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.sliders-cntr {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  background: red;
+  padding: 1rem;
+  width: 80%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
