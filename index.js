@@ -12,13 +12,16 @@ let initialColors;
 //Color Generator
 
 const generateHex = () => {
-  const letters = "#0123456789ABCDEF";
-  let hash = "#";
+  // const letters = "#0123456789ABCDEF";
+  // let hash = "#";
 
-  for (let i=0; i < 6; i++) {
-    hash += letters [Math.floor(Math.random()*16)]
-  }
-  return hash
+  // for (let i=0; i < 6; i++) {
+  //   hash += letters [Math.floor(Math.random()*16)]
+  // }
+  // return hash
+
+  const hexColor = chroma.random();
+  return hexColor;
 }
 
 const createRandomColors = () => {
